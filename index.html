@@ -1,0 +1,121 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=devide-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.6.0/dist/full.css" rel="stylesheet" type="text/css" />
+    <link href="https://cdn.jsdelivr.net/npm/basscss@latest/css/basscss.min.css" rel="stylesheet" type="text/css"/>
+    <link href="./styles.scss" rel="stylesheet" type="text/css" />
+    <script src="./scripts/components/product_card.js"></script>
+  </head>
+  <body>
+      <!-- nav bar starts -->
+      <div class="navbar bg-base-100">
+        <div class="navbar-start">
+          <div class="dropdown">
+            <label tabindex="0" class="btn btn-ghost btn-circle">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5"fill="none"viewBox="0 0 24 24"stroke="currentColor">
+                <path stroke-linecap="round"stroke-linejoin="round"stroke-width="2" d="M4 6h16M4 12h16M4 18h7"/>
+              </svg>
+            </label>
+            <ul tabindex="0" id="sidemenu" class="menu menu-compact dropdown-content backdrop-blur-2xl mt-3 p-2 pl-4 shadow bg-base/30 rounded-box w-52" >
+              <!-- pages -->
+            </ul>
+          </div>
+
+        </div>
+        <div class="navbar-center">
+          <a class="btn btn-ghost normal-case text-xl">My Shop</a>
+        </div>
+        <div class="navbar-end">
+            <!-- search button -->
+          <!-- <button class="btn btn-ghost btn-circle">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5"fill="none"viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round"stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+            </svg>
+          </button> -->
+
+          <!-- search input-->
+          <div class="form-control" id="search">
+            <input type="text" placeholder="Search for products..." class="input input-bordered" id="searchInput" />
+          </div>
+
+          <button class="btn btn-ghost btn-circle">
+            <div class="indicator">
+              <svg xmlns="http://www.w3.org/2000/svg"class="h-5 w-5"fill="none"viewBox="0 0 24 24"stroke="currentColor" >
+                <path stroke-linecap="round"stroke-linejoin="round"stroke-width="2"d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"/>
+              </svg>
+              <span class="badge badge-xs badge-primary indicator-item"></span>
+            </div>
+          </button>
+        </div>
+      </div>
+      <!-- nav bar ends -->
+      <div class="flex justify-center">
+        <button id="loading" class="btn loading">please wait</button>
+      </div>
+      <div id="main_container">
+      </div>
+  </body>
+  <script type="module" src="./scripts/index.js"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            clifford: '#da373d',
+          }
+        },
+        screens: {
+      'sm': '500px',
+      'md': [
+        // Sidebar appears at 768px, so revert to `sm:` styles between 768px
+        // and 868px, after which the main content area is wide enough again to
+        // apply the `md:` styles.
+        {'min': '668px', 'max': '767px'},
+        {'min': '868px'}
+      ],
+      'lg': '1100px',
+      'xl': '1400px',
+    }
+      },
+//       plugins: [require("daisyui")],
+
+//   // daisyUI config (optional)
+//   daisyui: {
+//     styled: true,
+//     themes: [
+//         {
+//           mytheme: {
+          
+//  "primary": "#d8b4fe",
+          
+//  "secondary": "#ede9fe",
+          
+//  "accent": "#ddd6fe",
+          
+//  "neutral": "#f5d0fe",
+          
+//  "base-100": "#FCFCFD",
+          
+//  "info": "#c4b5fd",
+          
+//  "success": "#73DEBE",
+          
+//  "warning": "#C37413",
+          
+//  "error": "#E96D75",
+//           },
+//         },
+//       ],
+//     base: true,
+//     utils: true,
+//     logs: true,
+//     rtl: false,
+//     prefix: "",
+//     darkTheme: "dark",
+//   },
+      
+    }
+  </script>
+</html>
