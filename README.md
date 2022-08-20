@@ -5,7 +5,7 @@
 
 ## See in action
 
-[Click here to see it live!](https://62ffc7cf1f6b4b12b4bbc3ae--famous-mochi-c174c5.netlify.app/)
+[Click here to see it live!](https://ng-ecommerce-html.netlify.app/)
 
 
 ## Authors
