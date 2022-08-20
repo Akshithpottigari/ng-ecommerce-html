@@ -1,4 +1,4 @@
-let product;
+let product=[];
 
 class productCard extends HTMLElement {
   constructor() {
